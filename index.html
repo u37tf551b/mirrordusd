@@ -3,54 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MirrorUSD - 去中心化金融协议</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>MirrorUSD - 去中心化美元稳定币协议</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      color: #f0f0f0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: #121212;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #bbb;
+    }
+    .lang-toggle {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: #00ffd5;
+      color: #000;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lang-toggle:hover {
+      background: #00c0a2;
+    }
+    .section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section h2 {
+      color: #00ffd5;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta a {
+      background: #00ffd5;
+      color: #000;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #00c0a2;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      padding: 30px 10px;
+    }
+    hr {
+      margin: 60px auto;
+      border: none;
+      border-top: 1px solid #333;
+      width: 80%;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-white shadow p-6 text-center">
-    <h1 class="text-4xl font-bold mb-2">MirrorUSD</h1>
-    <p class="text-lg text-gray-600">打破金融垄断的去中心化协议</p>
+<body>
+
+  <header>
+    <h1>MirrorUSD</h1>
+    <p id="subtitle">去中心化美元稳定币协议 / A Decentralized USD Stablecoin Protocol</p>
+    <div class="lang-toggle" onclick="toggleLanguage()">EN / 中文</div>
   </header>
 
-  <main class="p-6 max-w-3xl mx-auto">
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold mb-4">我们在思考：</h2>
-      <p class="text-gray-700 leading-relaxed">
-        如果信任可以被编程，谁还需要银行？MirrorUSD 设想一个无需中心银行的未来金融网络。
-        资金被打乱，交易被量化，风险由智能合约判断，每一美元都变成可以验证的代码路径。
-      </p>
-    </section>
+  <section class="section" id="section1">
+    <h2 id="title1">什么是 MirrorUSD？</h2>
+    <p id="text1">MirrorUSD 是一个以美元稳定币为锚定单位的去中心化金融协议。我们结合 AI 与算力网络，通过创新的分布式结构，实现资金的抗垄断、安全流转与用户隐私保护。</p>
+  </section>
 
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold mb-4">核心理念</h2>
-      <ul class="list-disc list-inside text-gray-700 space-y-2">
-        <li>去垄断：资金流打乱，全链路透明</li>
-        <li>风控机制：AI判断风险路径，自动拦截可疑交易</li>
-        <li>动态铸币：MirrorUSD锚定美元，按交易生成销毁</li>
-        <li>隐私保护：打散式钱包存储 + zk验证</li>
-      </ul>
-    </section>
+  <section class="section" id="section2">
+    <h2 id="title2">技术亮点</h2>
+    <ul id="text2">
+      <li>• 分布式资金拆分与打乱式存储</li>
+      <li>• 链上信任机制自动化执行</li>
+      <li>• 算力网络辅助生成加密随机性</li>
+      <li>• 可审计、开源的风险控制模块</li>
+    </ul>
+  </section>
 
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold mb-4">创始人心声</h2>
-      <blockquote class="text-gray-600 italic border-l-4 border-blue-400 pl-4">
-        “我没有高学历，也不是技术天才，但我在思考：是不是有一种方式，
-        让普通人也能参与构建一个更公平的金融系统。MirrorUSD 就是我的答案。”
-      </blockquote>
-    </section>
+  <section class="section" id="section3">
+    <h2 id="title3">白皮书下载</h2>
+    <p id="text3">点击下方按钮下载 MirrorUSD 项目的白皮书（即将上线）</p>
+    <div class="cta">
+      <a href="whitepaper.pdf" download id="buttonText">下载 PDF</a>
+    </div>
+  </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">加入我们</h2>
-      <p class="text-gray-700 mb-4">我们正在寻找构建者、风控专家、AI伙伴、社区参与者。</p>
-      <ul class="text-gray-700">
-        <li>Email: mirrorusd@proton.me</li>
-        <li>Telegram: t.me/MirrorUSD_Labs （示意）</li>
-      </ul>
-    </section>
-  </main>
+  <hr>
 
-  <footer class="bg-white text-center text-gray-500 p-4 mt-10">
-    © 2025 MirrorUSD. Made with conviction by a free thinker.
+  <footer>
+    &copy; 2025 MirrorUSD Project | Powered by GitHub Pages
   </footer>
+
+  <script>
+    const cn = {
+      subtitle: "去中心化美元稳定币协议 / A Decentralized USD Stablecoin Protocol",
+      title1: "什么是 MirrorUSD？",
+      text1: "MirrorUSD 是一个以美元稳定币为锚定单位的去中心化金融协议。我们结合 AI 与算力网络，通过创新的分布式结构，实现资金的抗垄断、安全流转与用户隐私保护。",
+      title2: "技术亮点",
+      text2: `
+        <li>• 分布式资金拆分与打乱式存储</li>
+        <li>• 链上信任机制自动化执行</li>
+        <li>• 算力网络辅助生成加密随机性</li>
+        <li>• 可审计、开源的风险控制模块</li>`,
+      title3: "白皮书下载",
+      text3: "点击下方按钮下载 MirrorUSD 项目的白皮书（即将上线）",
+      buttonText: "下载 PDF"
+    };
+
+    const en = {
+      subtitle: "A Decentralized USD Stablecoin Protocol / 去中心化美元稳定币协议",
+      title1: "What is MirrorUSD?",
+      text1: "MirrorUSD is a decentralized financial protocol pegged to the US dollar. By leveraging AI and compute networks, it ensures anti-monopoly capital flow, secure distributed storage, and privacy-first transactions through blockchain.",
+      title2: "Key Features",
+      text2: `
+        <li>• Distributed capital fragmentation and storage</li>
+        <li>• On-chain automated trust mechanism</li>
+        <li>• Encryption randomness powered by AI + compute</li>
+        <li>• Auditable and open-source risk control modules</li>`,
+      title3: "Download Whitepaper",
+      text3: "Click the button below to download the MirrorUSD whitepaper (coming soon)",
+      buttonText: "Download PDF"
+    };
+
+    let currentLang = 'cn';
+    function toggleLanguage() {
+      currentLang = currentLang === 'cn' ? 'en' : 'cn';
+      const langPack = currentLang === 'cn' ? cn : en;
+      document.getElementById('subtitle').innerText = langPack.subtitle;
+      document.getElementById('title1').innerText = langPack.title1;
+      document.getElementById('text1').innerText = langPack.text1;
+      document.getElementById('title2').innerText = langPack.title2;
+      document.getElementById('text2').innerHTML = langPack.text2;
+      document.getElementById('title3').innerText = langPack.title3;
+      document.getElementById('text3').innerText = langPack.text3;
+      document.getElementById('buttonText').innerText = langPack.buttonText;
+    }
+
+    // 滚动淡入动画
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
 </body>
-</html>Add index.html
+</html>
